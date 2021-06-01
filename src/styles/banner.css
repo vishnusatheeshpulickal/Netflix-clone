@@ -1,6 +1,6 @@
 .banner{
-    background-image: url('../images/banner.jpg');
     background-size: cover;
+    object-fit: contain;
     height: 448px;
     color: white;
 }
@@ -8,7 +8,8 @@
 .content{
     padding-top: 140px;
     height: 190px;
-    padding-left: 20px;
+    /* padding-left: 20px; */
+    margin-left: 30px;
 }
 
 .title{
@@ -35,18 +36,23 @@
 .button:hover{
     color: black;
     background-color: #e6e6e6;
+    transition: all 0.2s;
 }
 
 .description{
     width: 45rem;
     line-height: 1.3;
     padding-top: 1rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     height: 80px;
     max-width: 360px;
 }
 
 .fade_bottom{
     height: 7.4rem;
-    background-image: linear-gradient(180deg,transparent,rgba(153, 76, 76, 0.61),#111);
+    background-image: linear-gradient(180deg,transparent,rgba(37, 37, 37, 0.61),#111);
+}
+
+h4{
+    margin-bottom: 15px;
 }
