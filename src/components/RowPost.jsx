@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from '../../src/axios'
-import {imageUrl} from '../constants/constants';
+import {imageUrl,API_KEY} from '../constants/constants';
 import YouTube from 'react-youtube';
-import movieTrailer from 'movie-trailer';
 import '../styles/rowpost.css'
 
 
@@ -14,11 +13,11 @@ function RowPost(props) {
         if(trailerUrl){
             setTrailerUrl('');
         }else{
-            movieTrailer(movie?.name || '')
-             .then((url)=>{
-                 const urlParams = new URLSearchParams(new URL(url).search)
-                 setTrailerUrl(urlParams.get("v"));
-             }).catch(error => console.log(error))
+            axios.get(`movie/${movie.id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
+                setTrailerUrl(response.data.results[0].key)
+                console.log(response.data.results[0].key)
+            })
+           console.log('movie Id:-',movie.id) 
         }
     }
 
@@ -30,7 +29,7 @@ function RowPost(props) {
    },[])
 
    const opts = {
-    height: '390',
+    height: '400',
     width: '100%',
     playerVars: {
       autoplay: 1,

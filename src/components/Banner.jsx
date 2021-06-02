@@ -13,6 +13,7 @@ function Banner() {
            setMovie(response.data.results[random])
        })
     }, [])
+    console.log('movie details',movie)
 
     function truncate(str,n){
         return str?.length > n ? str.substr(0,n-1) + '...' : str;
@@ -21,7 +22,7 @@ function Banner() {
         <div className="banner" style={{backgroundImage:`url(${movie ? imageUrl+movie.backdrop_path : ''})`}}>
             <div className="content">
                <h1 className="title">{movie ? movie.title || movie.name: ''}</h1>
-               <h4> {BsStar} {BsFillBrightnessHighFill}rating</h4>
+               <h4> <i className="fa fa-star" /> {movie ? movie.vote_average : ''} rating</h4>
                <div className="banner_buttons">
                    <button className="button">Play</button>
                    <button className="button">My list</button>

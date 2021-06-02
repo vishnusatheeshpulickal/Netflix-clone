@@ -23,3 +23,7 @@
     max-height: 150px;
     margin-right: 10px;
 }
+
+img{
+    cursor: pointer;
+}
