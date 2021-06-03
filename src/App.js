@@ -23,6 +23,7 @@ import {
   thriller,
   war,
   western,
+  upcoming
 } from "./urls";
 import "./App.css";
 
@@ -51,6 +52,7 @@ function App() {
       <RowPost title="Thriller" isSmall url={thriller} />
       <RowPost title="War" isSmall url={war} />
       <RowPost title="Western" isSmall url={western} />
+      <RowPost title="Upcoming" isSmall url={upcoming} />
     </div>
   );
 }

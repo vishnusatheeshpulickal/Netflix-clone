@@ -1,7 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import axios from '../../src/axios'
 import {API_KEY,imageUrl} from '../constants/constants'
-import {BsFillBrightnessHighFill,BsStar} from 'react-icons/bs'
 import '../styles/banner.css'
 
 function Banner() {
@@ -13,7 +12,6 @@ function Banner() {
            setMovie(response.data.results[random])
        })
     }, [])
-    console.log('movie details',movie)
 
     function truncate(str,n){
         return str?.length > n ? str.substr(0,n-1) + '...' : str;
@@ -22,7 +20,7 @@ function Banner() {
         <div className="banner" style={{backgroundImage:`url(${movie ? imageUrl+movie.backdrop_path : ''})`}}>
             <div className="content">
                <h1 className="title">{movie ? movie.title || movie.name: ''}</h1>
-               <h4> <i className="fa fa-star" /> {movie ? movie.vote_average : ''} rating</h4>
+               <h1 className="details"> {movie ? movie.release_date ? movie.release_date.slice(0,4) : '' || movie.first_air_date ? movie.first_air_date.slice(0,4) : '' : '' }  | <i className="fa fa-star" /> {movie ? movie.vote_average : ''}  </h1>
                <div className="banner_buttons">
                    <button className="button">Play</button>
                    <button className="button">My list</button>

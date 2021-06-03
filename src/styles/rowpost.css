@@ -27,3 +27,11 @@
 img{
     cursor: pointer;
 }
+
+.poster:hover{
+    transform: scale(1.1);
+}
+
+.small_poster:hover{
+    transform: scale(1.1);
+}

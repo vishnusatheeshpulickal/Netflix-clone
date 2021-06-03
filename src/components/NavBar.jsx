@@ -11,7 +11,7 @@ function NavBar() {
             else
             handleShow(false);  
         })
-        return () => window.removeEventListener("scroll")
+        return () => window.removeEventListener("scroll",null)
     },[])
     return (
         <div className={`navbar ${show && 'navbar_black'}`}>
