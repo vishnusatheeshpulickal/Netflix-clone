@@ -5,7 +5,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import WarningIcon from '@material-ui/icons/Warning';
 
 export default function AlertDialog(props) {
   const [open, setOpen] = React.useState(true);

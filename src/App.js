@@ -30,6 +30,7 @@ import "./App.css";
 function App() {
   return (
     <div className="app">
+      <React.StrictMode >
       <NavBar />
       <Banner />
       <RowPost title="Netflix Originals" url={originals} />
@@ -53,6 +54,7 @@ function App() {
       <RowPost title="War" isSmall url={war} />
       <RowPost title="Western" isSmall url={western} />
       <RowPost title="Upcoming" isSmall url={upcoming} />
+      </React.StrictMode>
     </div>
   );
 }

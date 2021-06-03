@@ -19,19 +19,15 @@ function RowPost(props) {
                 if(response.data.results.length !== 0){
                     const videoKey = response.data.results[0].key;
                     setTrailerUrl(videoKey)
-                    console.log(videoKey)
                 }else{
-                    console.log('trailer not found')
                    setError({title:'Trailer not found',description:'Sorry this movie trailer is not available.',retryButton:false});
                 }
-            }).catch(err=>{setError({title:'Something went wrong!!',description:'Check your internet connection and try again',retryButton:true})})
-           console.log('movie Id:-',movie.id) 
+            }).catch(err=>{setError({title:'Something went wrong!!',description:'Check your internet connection and try again',retryButton:true})}) 
         }
     }
 
    useEffect(()=>{
        axios.get(props.url).then(response=>{
-           console.log(response.data)
            setMovies(response.data.results)
        }).catch(err=>{setError({title:'Something went wrong!!',description:'Check your internet connection and try again',retryButton:true})})
    },[])
@@ -41,6 +37,7 @@ function RowPost(props) {
     width: '100%',
     playerVars: {
       autoplay: 1,
+      origin:'https://youtube.com/'
     },
   };
   
