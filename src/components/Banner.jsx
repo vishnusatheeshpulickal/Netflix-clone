@@ -8,7 +8,6 @@ function Banner() {
     useEffect(() => {
        axios.get(`trending/all/day?api_key=${API_KEY}&language=en-US`).then(response=>{
            const random = Math.floor(Math.random()*response.data.results.length);
-           console.log(response.data.results[random])
            setMovie(response.data.results[random])
        })
     }, [])

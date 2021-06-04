@@ -1,6 +1,9 @@
 {
   "name": "3components",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.16.0"
+  },
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.4",
@@ -39,7 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "Simple Netflix clone by using react.",
   "main": "index.js",
   "devDependencies": {},
   "author": "Vishnu Satheesh",
