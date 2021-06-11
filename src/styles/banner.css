@@ -3,6 +3,7 @@
     object-fit: contain;
     height: 448px;
     color: white;
+    position: relative;
 }
 
 .content{

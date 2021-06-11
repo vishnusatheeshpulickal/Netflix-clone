@@ -23,7 +23,8 @@ import {
   thriller,
   war,
   western,
-  upcoming
+  upcoming,
+  trending
 } from "./urls";
 import "./App.css";
 
@@ -34,6 +35,7 @@ function App() {
       <NavBar />
       <Banner />
       <RowPost title="Netflix Originals" url={originals} />
+      <RowPost title="Trending" isSmall url={trending} />
       <RowPost title="Action" isSmall url={actions} />
       <RowPost title="Adventure" isSmall url={adventure} />
       <RowPost title="Action" isSmall url={animation} />

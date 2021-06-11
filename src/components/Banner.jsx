@@ -16,7 +16,7 @@ function Banner() {
         return str?.length > n ? str.substr(0,n-1) + '...' : str;
     }
     return (
-        <div className="banner" style={{backgroundImage:`url(${movie ? imageUrl+movie.backdrop_path : ''})`}}>
+        <div className="banner" style={{backgroundImage:`url(${movie ? imageUrl+movie.backdrop_path : ''})`,backgroundPosition:"center center"}}>
             <div className="content">
                <h1 className="title">{movie ? movie.title || movie.name: ''}</h1>
                <h1 className="details"> {movie ? movie.release_date ? movie.release_date.slice(0,4) : '' || movie.first_air_date ? movie.first_air_date.slice(0,4) : '' : '' }  | <i className="fa fa-star" /> {movie ? movie.vote_average : ''}  </h1>
