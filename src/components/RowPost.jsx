@@ -4,14 +4,17 @@ import {imageUrl,API_KEY} from '../constants/constants';
 import YouTube from 'react-youtube';
 import AlertDialog from '../components/AlertDialog'
 import '../styles/rowpost.css'
+import MovieDetails from './movieDetails';
 
 
 function RowPost(props) {
     const [movies, setMovies] = useState([]);
     const [trailerUrl,setTrailerUrl] = useState("");
     const [error,setError] = useState("");
+    const [movieDetails,setMovieDetails] = useState('');
 
    const handleClick = (movie) => {
+       setMovieDetails(movie)
         if(trailerUrl){
             setTrailerUrl('');
         }else{
@@ -51,6 +54,7 @@ function RowPost(props) {
              )    
             )}
             </div>
+            { movieDetails && <MovieDetails details={movieDetails} />}
             {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
         </div>
     )

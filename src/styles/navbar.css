@@ -26,3 +26,15 @@
     right: 20px;
     width: 30px;
 }
+
+.optionsContainer{
+  position: fixed;
+  right: 70px;
+  width: 30px;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
