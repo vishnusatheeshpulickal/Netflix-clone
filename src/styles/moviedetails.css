@@ -34,6 +34,7 @@ a {
     color: #ffffff;
     margin-bottom: 0.25em;
     opacity: 0.75;
+    padding-top: 10px;
   }
   .movie-content .movie-info {
     text-transform: uppercase;
@@ -58,6 +59,7 @@ a {
     padding: 0.8em 2em;
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
+    cursor: pointer;
   }
   
   .btn-outline {

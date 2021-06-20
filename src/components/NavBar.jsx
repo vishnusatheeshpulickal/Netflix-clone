@@ -4,7 +4,6 @@ import "../styles/navbar.css";
 
 function NavBar() {
   const [show, handleShow] = useState(false);
-  const [search, setSearch] = useState("");
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) handleShow(true);
